@@ -1,5 +1,7 @@
 import Head from "next/head";
-import Logo from "../components/icons /logo";
+import Logo from "../assets/logo";
+import PınIcon from "../assets/PınIcon";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -7,32 +9,21 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>To-Do-App</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Logo />
-        <div className="whitebox">
-          <div>
-            <p>To Do List</p>
-          </div>
-          <hr />
-        </div>
-      </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+      <div className={styles.wrapper}>
+        <div>
+          <Logo className={styles.logo} />
+        </div>
+        <div className={styles.whitebox}>
+          <p className={styles.todotext}>To Do List</p>
+          <hr className={styles.hrorange} />
+          <hr className={styles.hrgray} />
+        </div>
+      </div>
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
